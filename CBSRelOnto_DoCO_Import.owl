@@ -1,0 +1,2133 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/OntoDocRel/ContentBasedSimilarityOntology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="https://w3id.org/OntoDocRel/ContentBasedSimilarityOntology">
+    <Prefix name="" IRI="http://example.org/unnamed#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="p1" IRI="http://example.org/file1#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="ace_lexicon" IRI="http://attempto.ifi.uzh.ch/ace_lexicon#"/>
+    <Prefix name="ContentBasedSimilarityOntology" IRI="https://w3id.org/OntoDocRel/ContentBasedSimilarityOntology#"/>
+    <Import>http://purl.org/spar/fabio/</Import>
+    <Import>http://purl.org/spar/doco</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology provides classifications for content based similarity
+       measures. Beside that it aslo provides a hierarchy of content types of research papers 
+       for which these similarity measures are used. One major sub-category of content type
+       is &quot;Research Paper&quot; and other is &quot;Entities outside the research paper&quot;. Content base 
+       similarity measures are categorized as lexical, probabilisitic, visual, hybrid etc.
+       Following figure represents the basic structure for this ontology. This ontology imports two ontologies from SPAR ontologies set. One is DoCO (Document Component Ontology) which is used to model the contents of a scientific document. Other is FaBiO (FRBR aligned Bibliographic Ontology) which is used to model the references which appear in bibliographic section of a research document.
+        </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Muhammd Abdul Qadir, Muhammad Tanvir Afzal</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&xsd;string">Version 1.0, created with Protege 4.3</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2016-05-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Qamar Mahmood</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology models content based similarity measures and those parameters which are used in such measures. The ontology 
+       helps in classification different relatedness measures and categorization 
+       of different content types involved in this relatedness measures. 
+       </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CBSRelOnto: Modelling Content Based Similarity Measures</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ACM_Classification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actual_cosine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#All_contents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bag_of_words"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bibliography_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Citation_Graph"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Citation_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Citation_context_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Citation_count_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cluster_of_research_papers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Concept_Topic_model(tags)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Content_based_similarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cosine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DMOZ_categories"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dissimilarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Distance_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Edit_distance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Euclidean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Expanded_Text"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hellsinger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hybrid_content_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IDF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jaccard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KL_Divergence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Keywords"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#L_cosine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Latent_Dirchit_Allocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Layout_information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lexical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameters_of_relatedness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pearson_Correlation_Coefficient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Probabilistic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pseudo_Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference_Count"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference_count_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relatedness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Researchpaper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Section_Weight_based"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Set_of_terms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Similarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stemmed_Text"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Surface_Text"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Synonyms_of_terms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TF-IDF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Term_Frequency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Term_Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Term_Weight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Topic_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tree_edit_distance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tree_representation_of_concepts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Visual_similarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Writting_style"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#XML_Tags"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#n-grams"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RepresentedAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#UseIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Beel,_2011],[Huang,_2008],[Serousi,_2010]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Beel,_2013]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Bethard,_2010]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Chandarsakaren,2008]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Chandarsakaren,2008]--Tree_Representation_of_concepts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Chanderskaran,_2008]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Esposito,_2008]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Ferrara,_2011],[Nascimento,_2011],[Chanderskaran,_2008],[Bethard,_2010],[Sugyama,_2010],[Huwang,_2003]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Huang,_2008]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Huang,_2008],[Serousiet,_2010]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Huang,_2008]-Edit_Distance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Huwang,_2003]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Jiang,_2012]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Jiang,_2012],[Bethard,_2010]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Jiang,_2012],[Bethard,_2010],[Middleton,_2001]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Jiang,_2012][Bethard,_2010]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Middleton,_2001]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Middleton,_2001]-DMOZ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011],[Chandarsakaren,2008]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011]-Abstract"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011]-IDF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011]-LCosine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011]-Term_Frequency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011]-Term_Position"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011]-Term_Weight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Nascimento,_2011][Ferrara,_2011]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Serousi,_2010]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Serousi,_2010],[Huang,_2008]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#[Sugyama,_2010],[Chandarsakaren,2008],[Nascimento,_2011],[Bethdard,_2010],[Beel,_2013],_[Huang,_2008]"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/spar/deo/BibliographicReference"/>
+        <Class IRI="http://purl.org/spar/fabio/Expression"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/spar/doco/BodyMatter"/>
+        <Class IRI="#All_contents"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/spar/fabio/Abstract"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/spar/fabio/Chapter"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/spar/fabio/ConferencePaper"/>
+        <Class IRI="#Researchpaper"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/spar/fabio/JournalArticle"/>
+        <Class IRI="#Researchpaper"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/spar/fabio/WorkshopPaper"/>
+        <Class IRI="#Researchpaper"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ACM_Classification"/>
+        <Class IRI="#Topic_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actual_cosine"/>
+        <Class IRI="#Cosine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#All_contents"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bag_of_words"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bibliography_based"/>
+        <Class IRI="#Content_based_similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citation_Graph"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citation_based"/>
+        <Class IRI="#Content_based_similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citation_context_based"/>
+        <Class IRI="#Citation_based"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citation_count_based"/>
+        <Class IRI="#Citation_based"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cluster_of_research_papers"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept_Topic_model(tags)"/>
+        <Class IRI="#Topic_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Content_based_similarity"/>
+        <Class IRI="#Similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cosine"/>
+        <Class IRI="#Lexical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DMOZ_categories"/>
+        <Class IRI="#Topic_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dissimilarity"/>
+        <Class IRI="#Relatedness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distance_based"/>
+        <Class IRI="#Lexical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edit_distance"/>
+        <Class IRI="#Distance_based"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entities_outside_research_paper"/>
+        <Class IRI="#Parameters_of_relatedness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Euclidean"/>
+        <Class IRI="#Distance_based"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Expanded_Text"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hellsinger"/>
+        <Class IRI="#Distance_based"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hybrid_content_based"/>
+        <Class IRI="#Content_based_similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IDF"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jaccard"/>
+        <Class IRI="#Lexical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KL_Divergence"/>
+        <Class IRI="#Probabilistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Keywords"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#L_cosine"/>
+        <Class IRI="#Cosine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Latent_Dirchit_Allocation"/>
+        <Class IRI="#Lexical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Layout_information"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lexical"/>
+        <Class IRI="#Content_based_similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parameters_of_relatedness"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pearson_Correlation_Coefficient"/>
+        <Class IRI="#Lexical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Probabilistic"/>
+        <Class IRI="#Content_based_similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pseudo_Document"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reference_count_based"/>
+        <Class IRI="#Bibliography_based"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relatedness"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Researchpaper"/>
+        <Class IRI="#Parameters_of_relatedness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Section_Weight_based"/>
+        <Class IRI="#Content_based_similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Set_of_terms"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Similarity"/>
+        <Class IRI="#Relatedness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stemmed_Text"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface_Text"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Synonyms_of_terms"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TF-IDF"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Term_Frequency"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Term_Position"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Term_Weight"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Topic_model"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tree_edit_distance"/>
+        <Class IRI="#Distance_based"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tree_representation_of_concepts"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Visual_similarity"/>
+        <Class IRI="#Content_based_similarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writting_style"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#XML_Tags"/>
+        <Class IRI="#Entities_outside_research_paper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#n-grams"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Entities_outside_research_paper"/>
+        <Class IRI="#Researchpaper"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#All_contents"/>
+        <NamedIndividual IRI="#[Beel,_2011],[Huang,_2008],[Serousi,_2010]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Expanded_Text"/>
+        <NamedIndividual IRI="#[Beel,_2013]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pseudo_Document"/>
+        <NamedIndividual IRI="#[Bethard,_2010]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tree_representation_of_concepts"/>
+        <NamedIndividual IRI="#[Chandarsakaren,2008]--Tree_Representation_of_concepts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tree_edit_distance"/>
+        <NamedIndividual IRI="#[Chanderskaran,_2008]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Layout_information"/>
+        <NamedIndividual IRI="#[Esposito,_2008]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Actual_cosine"/>
+        <NamedIndividual IRI="#[Ferrara,_2011],[Nascimento,_2011],[Chanderskaran,_2008],[Bethard,_2010],[Sugyama,_2010],[Huwang,_2003]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bag_of_words"/>
+        <NamedIndividual IRI="#[Huang,_2008]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pearson_Correlation_Coefficient"/>
+        <NamedIndividual IRI="#[Huang,_2008],[Serousiet,_2010]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Edit_distance"/>
+        <NamedIndividual IRI="#[Huang,_2008]-Edit_Distance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cluster_of_research_papers"/>
+        <NamedIndividual IRI="#[Huwang,_2003]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Concept_Topic_model(tags)"/>
+        <NamedIndividual IRI="#[Jiang,_2012]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Citation_Graph"/>
+        <NamedIndividual IRI="#[Jiang,_2012],[Bethard,_2010]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Latent_Dirchit_Allocation"/>
+        <NamedIndividual IRI="#[Jiang,_2012],[Bethard,_2010],[Middleton,_2001]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic_model"/>
+        <NamedIndividual IRI="#[Jiang,_2012][Bethard,_2010]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ACM_Classification"/>
+        <NamedIndividual IRI="#[Middleton,_2001]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DMOZ_categories"/>
+        <NamedIndividual IRI="#[Middleton,_2001]-DMOZ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface_Text"/>
+        <NamedIndividual IRI="#[Nascimento,_2011],[Chandarsakaren,2008]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IDF"/>
+        <NamedIndividual IRI="#[Nascimento,_2011]-IDF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#L_cosine"/>
+        <NamedIndividual IRI="#[Nascimento,_2011]-LCosine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Term_Frequency"/>
+        <NamedIndividual IRI="#[Nascimento,_2011]-Term_Frequency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Term_Position"/>
+        <NamedIndividual IRI="#[Nascimento,_2011]-Term_Position"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Term_Weight"/>
+        <NamedIndividual IRI="#[Nascimento,_2011]-Term_Weight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#n-grams"/>
+        <NamedIndividual IRI="#[Nascimento,_2011][Ferrara,_2011]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Set_of_terms"/>
+        <NamedIndividual IRI="#[Serousi,_2010]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Jaccard"/>
+        <NamedIndividual IRI="#[Serousi,_2010],[Huang,_2008]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TF-IDF"/>
+        <NamedIndividual IRI="#[Sugyama,_2010],[Chandarsakaren,2008],[Nascimento,_2011],[Bethdard,_2010],[Beel,_2013],_[Huang,_2008]"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Bag_of_words"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Expanded_Text"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Set_of_terms"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Stemmed_Text"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Surface_Text"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="http://purl.org/spar/doco/Abstract"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="http://purl.org/spar/doco/BodyMatter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="http://purl.org/spar/doco/ListOfAgents"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="http://purl.org/spar/doco/Title"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="#All_contents"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#ACM_Classification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Concept_Topic_model(tags)"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#DMOZ_categories"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#IDF"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Parameters_of_relatedness"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Pseudo_Document"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Set_of_terms"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Synonyms_of_terms"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#TF-IDF"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Term_Frequency"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Term_Position"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Term_Weight"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Topic_model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Tree_representation_of_concepts"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#n-grams"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Researchpaper"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#IDF"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#TF-IDF"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Term_Frequency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Term_Position"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Term_Weight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#Tree_representation_of_concepts"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ExtractedFrom"/>
+        <Class IRI="#n-grams"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="#Bag_of_words"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="#Expanded_Text"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="#Set_of_terms"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="#Stemmed_Text"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RepresentedAs"/>
+        <Class IRI="#Surface_Text"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Actual_cosine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Dissimilarity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Euclidean"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Jaccard"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#L_cosine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Latent_Dirchit_Allocation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Pearson_Correlation_Coefficient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Relatedness"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseIn"/>
+        <Class IRI="#Tree_edit_distance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/orb/1.0/Conclusion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/orb/1.0/Introduction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/spar/deo/Introduction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/spar/deo/Reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/spar/deo/RelatedWork"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/spar/doco/Abstract"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/spar/doco/ListOfAgents"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.org/spar/doco/Title"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://salt.semanticauthoring.org/ontologies/sro#Conclusion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#All_contents"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Keywords"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/orb/1.0/Conclusion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Conclusions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/orb/1.0/Conclusion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Conclusion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/orb/1.0/Introduction</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Introductions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/orb/1.0/Introduction</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Introduction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/deo/BibliographicReference</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BibliographicReferences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/deo/BibliographicReference</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BibliographicReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/deo/Introduction</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Introductions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/deo/Introduction</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Introduction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/deo/Reference</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">References</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/deo/Reference</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/deo/RelatedWork</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RelatedWorks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/deo/RelatedWork</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RelatedWork</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/doco/Abstract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Abstracts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/doco/Abstract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Abstract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/doco/BodyMatter</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BodyMatters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/doco/BodyMatter</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BodyMatter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/doco/ListOfAgents</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ListOfAgentses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/doco/ListOfAgents</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ListOfAgents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/doco/Title</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Titles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/doco/Title</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/fabio/Abstract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Abstracts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/fabio/Abstract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Abstract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/fabio/Chapter</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Chapters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/fabio/Chapter</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/fabio/ConferencePaper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ConferencePapers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/fabio/ConferencePaper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ConferencePaper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/fabio/Expression</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Expressions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/fabio/Expression</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Expression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/fabio/JournalArticle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">JournalArticles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/fabio/JournalArticle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">JournalArticle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://purl.org/spar/fabio/WorkshopPaper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">WorkshopPapers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://purl.org/spar/fabio/WorkshopPaper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">WorkshopPaper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>http://salt.semanticauthoring.org/ontologies/sro#Conclusion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Conclusions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>http://salt.semanticauthoring.org/ontologies/sro#Conclusion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Conclusion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#contains"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Authors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ACM_Classification</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ACM_Classifications</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ACM_Classification</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ACM_Classification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ACM_Classification</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of ACM classification model which is used as a topic model for representation of information of topics related to a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Actual_cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Actual_cosines</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Actual_cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Actual_cosine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Actual_cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the classical cosine similarity measure to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#All_contents</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">All_contentses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#All_contents</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">All_contents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#All_contents</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents all the contents of research paper, it means all contents appearing in title, abstract, keywords, authors, affiliations, introduction, related work, all other sections, results, conclusions and references</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Bag_of_words</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Bag_of_wordses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Bag_of_words</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Bag_of_words</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Bag_of_words</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This concept represents the words extracted from contents of research article and used as a bag like collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Bibliography_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Bibliography_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Bibliography_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Bibliography_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Bibliography_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Such similarity measures which use bibliographic references of research papers for finding similar research papers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Citation_Graph</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_Graphs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Citation_Graph</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_Graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Citation_Graph</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of a graph whihc contains research articles as nodes and citation links between research articles as edges</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Citation_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Citation_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Citation_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Such similarity measures which use citations, citation frequency, citation counts and citation context for finding similar research papers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Citation_context_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_context_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Citation_context_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_context_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Citation_count_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_count_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Citation_count_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Citation_count_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Cluster_of_research_papers</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cluster_of_research_paperses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Cluster_of_research_papers</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cluster_of_research_papers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cluster_of_research_papers</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the groups of research articles formed on basis of some criteria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Concept_Topic_model(tags)</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Concept_Topic_model(tags)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Concept_Topic_model(tags)</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Concept_Topic_model(tags)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Concept_Topic_model(tags)</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of a topic model which uses tags from some social bookmarking sites. These tags are associated with a research article.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Content_based_similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Content_based_similarities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Content_based_similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Content_based_similarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Content_based_similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of such similarity measures which use contents of research articles to compute relatedness between them</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cosines</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cosine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class repersents the cosine similarity measures to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#DMOZ_categories</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">DMOZ_categorieses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#DMOZ_categories</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">DMOZ_categories</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DMOZ_categories</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents another category of topics representing a topic model to be used by some research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Dissimilarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dissimilarities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Dissimilarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dissimilarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dissimilarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of dissimilarity measure which can be used to compute relatedness between researcha articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Distance_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Distance_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Distance_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Distance_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Distance_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents different distance based similarity measures to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Edit_distance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Edit_distances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Edit_distance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Edit_distance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Edit_distance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the similarity measure which uses edit distance method to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Entities_outside_research_paper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Entities_outside_research_papers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Entities_outside_research_paper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Entities_outside_research_paper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Entities_outside_research_paper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents those entities which are not part of contents of research paper, but they are used in different relatedness measures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Euclidean</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Euclideans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Euclidean</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Euclidean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Euclidean</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the Euclidean distance measure to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Expanded_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Expanded_Texts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Expanded_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Expanded_Text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Expanded_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A representation of text which involves additional text other than text from contents of research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <IRI>#ExtractedFrom</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ExtractedFrom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <IRI>#ExtractedFrom</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ExtractedFroms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <IRI>#ExtractedFrom</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ExtractedFromed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Hellsinger</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hellsingers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Hellsinger</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hellsinger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hellsinger</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the Hellsinger distance measure as a similarity measure to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Hybrid_content_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hybrid_content_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Hybrid_content_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hybrid_content_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hybrid_content_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents combinations of different content based similarity measures to compute relatedness between research papers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#IDF</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IDFs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#IDF</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IDF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IDF</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a feature Terrm Frequency/Inverse Document Frequency extracted from some representation of text from research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Jaccard</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Jaccards</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Jaccard</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Jaccard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Jaccard</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents jaccard similarity measure to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#KL_Divergence</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">KL_Divergences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#KL_Divergence</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">KL_Divergence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Keywords</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Keywordses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Keywords</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Keywords</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Keywords</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the user provided keywords section of a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#L_cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">L_cosines</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#L_cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">L_cosine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#L_cosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a variation of classical cosine similarity measure to compute the relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Latent_Dirchit_Allocation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Latent_Dirchit_Allocations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Latent_Dirchit_Allocation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Latent_Dirchit_Allocation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Latent_Dirchit_Allocation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a similarity measure which uses different topic models to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Layout_information</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Layout_informations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Layout_information</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Layout_information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Layout_information</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of physical layout of a research article </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Lexical</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Lexicals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Lexical</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Lexical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lexical</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents those content based similarity measures which use lexical structure of text of research papers to compute relatedness between them</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Parameters_of_relatedness</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Parameters_of_relatednesses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Parameters_of_relatedness</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Parameters_of_relatedness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Parameters_of_relatedness</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents different content types which can be use as a parameters for relatedness measurement between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Pearson_Correlation_Coefficient</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pearson_Correlation_Coefficients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Pearson_Correlation_Coefficient</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pearson_Correlation_Coefficient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pearson_Correlation_Coefficient</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a similarity measure which is a variation of cosine similarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Probabilistic</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Probabilistics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Probabilistic</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Probabilistic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Probabilistic</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of thos similarity measures which use some probabilistic measures to compute relatedness bettween research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Pseudo_Document</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pseudo_Documents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Pseudo_Document</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pseudo_Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pseudo_Document</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of a document generated from a research article on basis of some criteria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Reference_Count</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reference_Counts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Reference_Count</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reference_Count</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Reference_Count</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">reference counts n(r, d) (1 if the bibliography of d contains a reference to r, and 0 otherwise).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Reference_count_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reference_count_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Reference_count_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reference_count_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Relatedness</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relatednesses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Relatedness</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relatedness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Relatedness</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the relatedness measures which can be used to find relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <IRI>#RepresentedAs</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RepresentedAs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <IRI>#RepresentedAs</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RepresentedAses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <IRI>#RepresentedAs</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RepresentedAsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RepresentedAs</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Different representation forms for contents of a research article, such as surface text, expanded text, stemmed text etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Researchpaper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Researchpapers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Researchpaper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Researchpaper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Researchpaper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a research article/journal paper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Section_Weight_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Section_Weight_baseds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Section_Weight_based</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Section_Weight_based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Set_of_terms</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Set_of_termses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Set_of_terms</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Set_of_terms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Set_of_terms</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents set of terms extracted from text representation of a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Similarities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Similarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of similarity measures used to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Stemmed_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Stemmed_Texts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Stemmed_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Stemmed_Text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Stemmed_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the text representation after stemming for a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Surface_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Surface_Texts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Surface_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Surface_Text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Surface_Text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the plain text representation of contents of a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Synonyms_of_terms</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Synonyms_of_termses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Synonyms_of_terms</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Synonyms_of_terms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Synonyms_of_terms</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents synoym sets of different terms which appear in contents of a research article or different research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#TF-IDF</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">TF-IDFs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#TF-IDF</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">TF-IDF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TF-IDF</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a feature: Term Frequency/Inverse Document Frequency which is extracted from contents of research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Term_Frequency</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Term_Frequencies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Term_Frequency</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Term_Frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Term_Frequency</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a feature called term frequency i.e. how many times a term appeared in text of a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Term_Position</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Term_Positions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Term_Position</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Term_Position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Term_Position</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a feature term position, which tells about position of a term in conents of a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Term_Weight</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Term_Weights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Term_Weight</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Term_Weight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Term_Weight</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents term weight, which shows association of a weight value with a term by using some weighting scheme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Topic_model</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Topic_models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Topic_model</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Topic_model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Topic_model</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents an organization of topics which are related to some research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Tree_edit_distance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tree_edit_distances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Tree_edit_distance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tree_edit_distance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tree_edit_distance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a similarity measure which uses tree of concepts to compute relatedness between research articles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Tree_representation_of_concepts</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tree_representation_of_conceptses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Tree_representation_of_concepts</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tree_representation_of_concepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tree_representation_of_concepts</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents hierarchical representation of concepts extracted from contents of a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <IRI>#UseIn</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">UseIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <IRI>#UseIn</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">UseIns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <IRI>#UseIn</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">UseIned</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Visual_similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Visual_similarities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Visual_similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Visual_similarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Visual_similarity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of such similarity measures which use visual layout of research articles to compute relatedness between them</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Writting_style</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Writting_styles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Writting_style</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Writting_style</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Writting_style</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents a person&apos;s writting style characteristics which they used to write a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#XML_Tags</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">XML_Tagses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#XML_Tags</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">XML_Tags</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#XML_Tags</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the concept of XML Tags based representation of a research article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Beel,_2011],[Huang,_2008],[Serousi,_2010]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Beel,_2011],[Huang,_2008],[Serousi,_2010]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Beel,_2013]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Beel,_2013]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Bethard,_2010]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Bethard,_2010]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Chandarsakaren,2008]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Chandarsakaren,2008]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Chandarsakaren,2008]--Tree_Representation_of_concepts</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Chandarsakaren,2008]--Tree_Representation_of_concepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Chanderskaran,_2008]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Chanderskaran,_2008]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Esposito,_2008]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Esposito,_2008]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Ferrara,_2011],[Nascimento,_2011],[Chanderskaran,_2008],[Bethard,_2010],[Sugyama,_2010],[Huwang,_2003]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Ferrara,_2011],[Nascimento,_2011],[Chanderskaran,_2008],[Bethard,_2010],[Sugyama,_2010],[Huwang,_2003]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Huang,_2008]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Huang,_2008]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Huang,_2008],[Serousiet,_2010]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Huang,_2008],[Serousiet,_2010]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Huang,_2008]-Edit_Distance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Huang,_2008]-Edit_Distance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Huwang,_2003]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Huwang,_2003]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Jiang,_2012]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Jiang,_2012]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Jiang,_2012],[Bethard,_2010]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Jiang,_2012],[Bethard,_2010]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Jiang,_2012],[Bethard,_2010],[Middleton,_2001]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Jiang,_2012],[Bethard,_2010],[Middleton,_2001]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Jiang,_2012][Bethard,_2010]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Jiang,_2012][Bethard,_2010]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Middleton,_2001]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Middleton,_2001]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Middleton,_2001]-DMOZ</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Middleton,_2001]-DMOZ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011],[Chandarsakaren,2008]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011],[Chandarsakaren,2008]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011]-Abstract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011]-Abstract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011]-IDF</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011]-IDF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011]-LCosine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011]-LCosine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011]-Term_Frequency</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011]-Term_Frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011]-Term_Position</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011]-Term_Position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011]-Term_Weight</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011]-Term_Weight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Nascimento,_2011][Ferrara,_2011]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Nascimento,_2011][Ferrara,_2011]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Serousi,_2010]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Serousi,_2010]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Serousi,_2010],[Huang,_2008]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Serousi,_2010],[Huang,_2008]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <IRI>#[Sugyama,_2010],[Chandarsakaren,2008],[Nascimento,_2011],[Bethdard,_2010],[Beel,_2013],_[Huang,_2008]</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">[Sugyama,_2010],[Chandarsakaren,2008],[Nascimento,_2011],[Bethdard,_2010],[Beel,_2013],_[Huang,_2008]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <IRI>#contains</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <IRI>#contains</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">containses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <IRI>#contains</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">containsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#n-grams</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">n-gramses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#n-grams</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">n-grams</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#n-grams</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This class represents the n-gram representation of text from a research article</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
